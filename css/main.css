@@ -1,0 +1,23 @@
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.formulaire > form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.MainPage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+header{
+    text-align: center;
+}

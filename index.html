@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faisons un CRUD en PHP !</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <header>
+        <h1>Faisons un CRUD en PHP !</h1>
+    </header>
+    <main class="MainPage">
+        <section class="formulaire">
+            <form action="php/InsertFilm.php" method="post">
+                <h1>Ajouter des Films</h1>
+                <input name="NumFilm" type="text" placeholder="numero de film">
+                <input name="Titre" type="text" placeholder="Titre">
+                <label for="Realisateur">Realisateur :</label>
+                <select name="Realisateur" id="LaListeDesIndividus_Film">
+                    <!--Ici se mettent les options avec chaque individu-->
+                </select>
+                <input name="Genre" type="text" placeholder="Genre">
+                <input name="Annee" type="text" placeholder="2019">
+                <input type="submit" value="Ajouter">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/InsertIndividu.php" method="post">
+                <h1>Ajouter des Acteurs</h1>
+                <input name="NumInd" type="text" placeholder="numero d'Individu">
+                <input name="Nom" type="text" placeholder="Nom">
+                <input name="Prenom" type="text" placeholder="Prenom">
+                <input type="submit" value="Ajouter">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/InsertActeur.php" method="post">
+                <h1>Designer comme acteur de films</h1>
+                <select name="Individu" id="LaListeDesIndividus">
+                    <!--Ici se mettent les options avec chaque individu-->
+                </select>
+                <select name="Film" id="LaListeDesFilms">
+                    <!--Ici se mettent les options avec chaque Film-->
+                </select>
+                <input name="Role" type="text" placeholder="Role">
+                <input type="submit" value="Desginer comme Acteur du film">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/UpdateFilm.php" method="post">
+                <h1>Mettre à jour des Films</h1>
+                <select name="NumFilm" id="LaListeDesFilms_Update">
+                    <!--Ici se mettent les options avec chaque Film-->
+                </select>            
+                <input name="Titre" type="text" placeholder="Titre">
+                <label for="Realisateur">Realisateur :</label>
+                <select name="Realisateur" id="LaListeDesIndividus_Film_Update">
+                    <option value="Aucun">L'actuel</option>
+                    <!--Ici se mettent les options avec chaque individu-->
+                </select>
+                <input name="Genre" type="text" placeholder="Genre">
+                <input name="Annee" type="text" placeholder="Annee">
+                <input type="submit" value="Mettre à jour">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/UpdateIndividu.php" method="post">
+                <h1>Mettre à jour des Individus</h1>
+                <select name="Individu" id="LaListeDesIndividus_Update">
+                    <!--Ici se mettent les options avec chaque individu-->
+                </select>
+                <input name="Nom" type="text" placeholder="Nom">
+                <input name="Prenom" type="text" placeholder="Prenom">
+                <input type="submit" value="Mettre à jour">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/DeleteIndividu.php" method="post">
+                <h1>Efface Un Acteur</h1>
+                <select name="Individu" id="LaListeDesIndividus_Delete">
+                    <!--Ici se mettent les options avec chaque individu-->
+                </select>
+                <input type="submit" value="Effacer">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/DeleteFilm.php" method="post">
+                <h1>Effacer un Film</h1>
+                <select name="Film" id="LaListeDesFilms_Delete">
+                    <!--Ici se mettent les options avec chaque Film-->
+                </select>
+                <input type="submit" value="Effacer">
+            </form>
+        </section>
+        <section class="formulaire">
+            <form action="php/DeleteActeur.php" method="post">
+                <h1>Effacer un Film</h1>
+                <select name="Film" id="LaListeDesFilms_Acteurs_Delete">
+                    <!--Ici se mettent les options avec chaque Film-->
+                </select>
+                <select name="Individu" id="LaListeDesActeursParFilm_Delete">
+                    <!--Ici se mettent les options avec chaque Acteur-->
+                </select>
+                <input type="submit" value="Effacer">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
